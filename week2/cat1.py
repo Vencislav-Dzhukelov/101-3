@@ -1,14 +1,15 @@
 import sys
 
+
 def read_file():
-    if len(sys.argv[1]) > 1:
+    if len(sys.argv) > 1:
         filename = sys.argv[1]
         text_file = open(filename, "r")
         text = text_file.read()
         text_file.close()
         return text
     else:
-        print ("sadfsdfd")
+        print ("Enter file name:")
 
 
 if __name__ == '__main__':
