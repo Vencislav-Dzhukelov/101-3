@@ -1,3 +1,6 @@
+import calendar
+
+
 def count_words(arr):
     dictionary = {}
     for i in arr:
@@ -45,20 +48,6 @@ print (iterations_of_nan_expand("Show these people!"))
 print (iterations_of_nan_expand("Not a NaN"))
 print (iterations_of_nan_expand(
     'Not a Not a Not a Not a Not a Not a Not a Not a Not a Not a NaN'))
-
-
-def group_help(lst):
-    first_item = lst[0]
-    result = [first_item]
-    for i in range(1, len(lst)):
-        if lst[i] == first_item:
-            result.append(lst[i])
-        else:
-            break
-    return result
-
-print ("group_help test:")
-print (group_help([1, 1, 1, 2, 1, 1, 3]))
 
 
 def is_prime(n):
@@ -116,6 +105,20 @@ print (prime_factorization(14))
 print (prime_factorization(356))
 print (prime_factorization(89))
 print (prime_factorization(1000))
+
+
+def group_help(lst):
+    first_item = lst[0]
+    result = [first_item]
+    for i in range(1, len(lst)):
+        if lst[i] == first_item:
+            result.append(lst[i])
+        else:
+            break
+    return result
+
+print ("group_help test:")
+print (group_help([1, 1, 1, 2, 1, 1, 3]))
 
 
 def group(lst):
@@ -288,11 +291,6 @@ print (sum_of_divisors(1))
 print (sum_of_divisors(1000))"""
 
 
-def is_prime(n):
-    n = abs(n)
-    return sum_of_divisors(n) - 1 == n
-
-
 def goldbach(n):
     current = 2
     result = []
@@ -349,3 +347,20 @@ print (magic_square([[7, 12, 1, 14], [2, 13, 8, 11],
                                      [16, 3, 10, 5], [9, 6, 15, 4]]))
 print (magic_square([[23, 28, 21], [22, 24, 26], [27, 20, 25]]))
 print (magic_square([[16, 23, 17], [78, 32, 21], [17, 16, 15]]))
+
+
+def is_leap_year(year):
+    if calendar.isleap(year):
+        return {3, 4}
+    else:
+        return {4}
+
+
+def friday_years(start, end):
+    return sum([1 for elem in[year for year in range(start, end + 1)
+               if calendar.weekday(year, 1, 1) in is_leap_year(year)]])
+
+print ("friday_years test:")
+print (friday_years(1000, 2000))
+print (friday_years(1753, 2000))
+print (friday_years(1990, 2015))
