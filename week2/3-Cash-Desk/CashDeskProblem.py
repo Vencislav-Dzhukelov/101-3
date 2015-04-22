@@ -1,3 +1,6 @@
+import collections
+
+
 class Bill:
 
     def __init__(self, amount):
@@ -37,6 +40,7 @@ print (money_holder)
 
 
 class BatchBill():
+
     def __init__(self, bills):
         self.bills = bills
 
@@ -65,6 +69,7 @@ for bill in batch:
 
 
 class CashDesk():
+
     def __init__(self):
         self.money = []
 
@@ -89,3 +94,4 @@ desk = CashDesk()
 desk.take_money(batch)
 desk.take_money(Bill(10))
 print(desk.total())
+desk.inspect()
