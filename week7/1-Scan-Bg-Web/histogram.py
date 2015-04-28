@@ -35,7 +35,7 @@ class Histogram():
                     self.add("lighttpd")
 
         keys = list(self.my_dict.keys())
-        values = list(self.my_dict.values())
+        # values = list(self.my_dict.values())
 
         X = list(range(len(keys)))
 
