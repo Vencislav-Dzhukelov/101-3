@@ -69,6 +69,3 @@ from customers c join orders o on c.customerid = o.customerid
 group by contactname
 order by count(orderid) desc
 limit 1
-
-
-
