@@ -54,6 +54,7 @@ class CreateCinemaDB():
 c = CreateCinemaDB()
 if __name__ == "__main__":
     # c.make_db()
+    '''
     c.add_movie("The Hunger Games: Catching Fire", 7.9)
     c.add_movie("Wreck-It Ralph", 7.8)
     c.add_movie("Her", 8.3)
@@ -70,3 +71,4 @@ if __name__ == "__main__":
     c.add_reservations("Ivo", 3, 1, 2)
     c.add_reservations("Mysterious", 5, 2, 3)
     c.add_reservations("Mysterious", 5, 2, 4)
+    '''
