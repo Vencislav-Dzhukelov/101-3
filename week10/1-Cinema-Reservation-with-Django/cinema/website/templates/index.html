@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table class="movies">
+    <h1>Movies and projections:</h1>
+        {% for movie in movies %}
+            <tr>
+                <td>
+                    <h2>{{ movie.name }}</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Rating of the movie:
+                    {{ movie.rating }}
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <strong>Projections:</strong>
+                </td>
+            </tr>
+            {%for projection in projections%}
+                {%if movie == projection.movie_id%}
+                    <tr>
+                        <td>
+                            {{projection.date}} at {{projection.time}} - {{projection.pr_type}}
+                        </td>
+                    </tr>
+                    <p></p>
+                {%endif%}
+            {%endfor%}
+        {% endfor %}
+    </table>
+{% endblock %}
